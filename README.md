@@ -41,7 +41,7 @@ What it does:
   - steer status (LEFT / NEUTRAL / RIGHT) + percent
   - throttle status (BACK / STOP / FWD) + percent
 
-2) Motor Reciever (ESP32 DevKit + BTS7960) -- motor
+2) Motor Reciever (ESP32 DevKit + BTS7960) -- motor_driver.ino
 Purpose: Receives ESP-NOW packets and drives the IBT-2 / BTS7960 motor driver using RPWM/LPWM and enable pins.
 
 What it does: 
@@ -69,7 +69,7 @@ What it does:
   - FWD = 3 blinks
   - blinks only on state changes (not every packet)
  
-3) Servo Receiver (ESP32 DevKit + servo on GPIO18)
+3) Servo Receiver (ESP32 DevKit + servo on GPIO18) -- servo.ino
 Purpose: Receives ESP-NOW packets and drives the steering servo.
 
 What it does: 
@@ -87,8 +87,3 @@ What it does:
   - LEFT = 2 blinks
   - RIGHT = 3 blinks
   - blinks on state change only
-
-
-
-
-   
