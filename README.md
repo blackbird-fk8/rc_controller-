@@ -87,3 +87,27 @@ What it does:
   - LEFT = 2 blinks
   - RIGHT = 3 blinks
   - blinks on state change only
+ 
+Hardware Used
+- 
+1) Controller
+   - Joycons (x2) --- Data sheet: https://naylampmechatronics.com/img/cms/Datasheets/000036%20-%20datasheet%20KY-023-Joy-IT.pdf
+   - 0.1uF (x2)
+   - 10uF
+   - SSD1306 0.96" OLED Display --- Data sheet: https://www.digikey.com/htmldatasheets/production/2097726/0/0/1/ssd1306.html?gclid=8058250b81d1155c3e224caf551ad927&gclsrc=3p.ds&msclkid=8058250b81d1155c3e224caf551ad927
+   - Lonely Binary ESP32-S3 ---
+     - Link to product: https://www.amazon.com/ESP32-S3-Development-16MB-IPEX-Antenna/dp/B0FFLXM9KL?th=1
+     - Data sheet: https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf
+     - Pin out: https://mischianti.org/esp32-s3-devkitc-1-high-resolution-pinout-and-specs/
+2) Motor_driver
+   - IBT_2/BST7960 Motor Driver/H-Bridge
+     - Data sheet: https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf
+   - ESP32 DevKit with GPIO board
+     - Product Link: https://www.amazon.com/DORHEA-Development-ESP-WROOM-32-Microcontroller-Interface/dp/B0C8HBW7NM/ref=sr_1_8?adgrpid=1341406580594346&dib=eyJ2IjoiMSJ9.sgIMXpa_IDVZjSscXLM__OpmdcQkLFrRfOS09CM4qlAGP4S_RtGMEN93MwhCWlqV-3VuIT1PxtLdCEBeLeO0N8H--g-LY-EjEpF7eFhzBOOJNoNsMEyltGlz860r-rkj2O_bGYP6jxpfGotBZAY68Pi65VDRCLwE2IPcic4HLxGaaubwqVuFUzVBFaNivMEQWWwKgLYWLGheK_NKxBF3BtJPqFYXc5QuAijCPDT7ccs.uSJwtopJyKzIFFbJm0njMtuhqvb5REx7YXR9JXeDxnw&dib_tag=se&hvadid=83838173835624&hvbmt=bp&hvdev=c&hvlocphy=111668&hvnetw=o&hvqmt=p&hvtargid=kwd-83838951732152%3Aloc-190&hydadcr=24362_13514990&keywords=esp32%2Bgpio%2Bbreakout%2Bboard&mcid=68e55d7128d13dac98d9c9c5c4ed8225&msclkid=10f8a588aec6166c91becc2c78997bcd&qid=1772410465&sr=8-8&th=1
+     - Data sheet: https://www.digikey.com/htmldatasheets/production/2314601/0/0/1/esp32-wroom-32-16mb-.html?gclid=592d408eadb71c4ec4e6292a78465bea&gclsrc=3p.ds&msclkid=592d408eadb71c4ec4e6292a78465bea
+     - Pin out: https://esp32io.com/
+3) Servo_driver
+   - Servo
+     - Product Link (will implement for next phase, current servo is a 5V for a smaller RC for testing purposes with code): https://www.amazon.com/ANNIMOS-Coreless-Steering-Stainless-Waterproof/dp/B0CCPDYBDQ/ref=sr_1_1_sspa?crid=WDDQEM68F5YL&dib=eyJ2IjoiMSJ9.-PZhae6k4jOmh_FPZJLBFPzqmoimptedIFHzcdb4cqSpkEJXn9GkdyWyVxxiEsB8eV6iH0eed4wPyHHnlNicS44LKQn2wB24MSqR1GOMHmBg5r25sl0uSyrVzA7ks6hBuaJTurOFGxWsSzKYASFS-lmAVLWc-OMtKg_kgCYktAFS0JB9sQ-iSS6CP81KO4VoETT6XEGTg-PFRY5j_jk4gjzzn9yNJlGz0BwscEbygxs13o4xkF9zkz9ibILYfAl2vxkZq53vaHMyKd_FZugydRHe1iHMa2GH7mL-CwlBc3o.0PV9hHSHhGSvIp5HVcQqJgx0t5C81yq40sZZV6B50Bs&dib_tag=se&keywords=45kg%2Bservo&qid=1772410754&sprefix=45kg%2Bservo%2Caps%2C196&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1
+     - ESP32 DevKit with GPIO board
+       - Product Link: Refer to the link in motor_driver section above.
