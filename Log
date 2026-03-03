@@ -1,0 +1,76 @@
+Feb 9-14th
+- During this week, I have located parts to control the DC motors on the toy car that Chris has brought in. The car works off of an odd relay switch and a DPDT switch for motor direction combination. 
+Easier to redesign how to control the DC motors (assuming). Found IBT_2 H-bridge motors to accurately control the direction and speed of the DC motors with a simple microcontroller. 
+A standard ESP32 with a GPIO breakout board should be able to handle multiple PWM signals. As well as testing on a 5V (low power) 180-degree servo & 12V DC motor (9V battery was efficient to test with) from my 
+EE234 RC car for initial testing on a code i will develope. 
+
+Note: Previoulsy in January, Chris wanted control communication with the Jetson and some other controller (main device to send Ethernet data to the Jetson) for to drive the RC wirelessly with a good range. So we tested 
+some outdoor Wifi Extenders that could work, but require 24V, which outdoes the 12V system we currently have. That is also a bigger load for the Jetson since its running the vision, local ai, the whole pipline and to dransmit idea
+is not the best choice to me.). We also agreed as a group what we would do as of parts, such as Chris does the software on the Jetson and vision as well contributes the pipeline with Abylay & Zirun while they are collecting data sets,
+creating models and making one system. While I design the sprayer system & rc portion. 
+
+Feb 16-20th
+- During this week, I had roughly designed the Spray control side of the radio-controlled car, first by understanding the relay switches behavior and ports. As well as the power requirements (no issue with the power ratings
+for the relay switches are acceptable for our usage) for connecting a 12V 3A pump and a 12V solenoid valve. Power requirements should not be an issue. Need to figure out the RC side to control the two 12V dc motors. 
+(insert whiteboard rough draft). 
+
+Note: Chris wants to short the wires to be able to PWM control the motor. No idea how that plan (verbally told) works, as the power from the huge 12V battery is distributed through the relays & dpdt mechanical switch. 
+Unsure how that would work since the ESP32 supports only 3.3V pwm triggering. Will not work with 12V and high voltage connections directly and will burn out the microcontroller easily. 
+
+Note: A second note, I've chosen to work on the hardware of both the sprayer and as well the RC. Later, after planning the sprayer, I will develop the RC hardware and code. 
+
+Feb 16-20th 
+- I have designed a rough sketch on the whiteboard in the capstone room of how the wiring will work between the two motors, battery, esp32's. Next step is to order the H-Bridges, code the behavior of the RC side, as well as the
+sprayer side. 
+(insert images)
+
+Note: I have asked Chris multiple times throughout the week to send the product links of where he had bought the 12V Solenoid valve, pump & the servo motor so I can confirm the power requirements and 
+additional information I may miss that may alter my design. The only response I get is "well, you know how these Chinese products are, they never give them to you, just search it up online or something". 
+This was not helpful at all, due to the many versions of the same product, and data sheets I found did not match the model #'s on these products. Took me a couple of hours to find the exact model for each product. 
+This has delayed my time to develop and test the products. 
+
+Feb 23-27th
+- I have tested the Sprayer system, which works as intended and accepts a letter such as "S" to spray that activates/turns on the solenoid valve open and turns on the pump and vice versa. I have as well wired and coded the
+RC side with the H-Bridge to accept a letter such as "f" for foward etc. Thought later we would just install the syntaxes and safety measures for certain scenarios. 
+
+Note: On the 27th of February, I walked into the capstone room around (at 9:20am, because he previously asked a few days ago if we could get the car to start with my design, almost pre-wired for the motors.) I got settled 
+with my belongings, my electronic components, and hardware/tools. Chris, I think, has been there since 9:00 am. I had to use the restroom and came back quickly, then noticed he had barley noticed my past rough drawings on the 
+whiteboard a few weeks back, and he questioned, "Did you draw this?", I replied "yes its to control the motors with the h-bridges, it would be easier that way than reusing there pre wire circuit since you cant 
+directly control there relay switches to the motor. its not reliable to use PWM for relays as it can cause stress and damage if used too fast (he even mentioned that previously in January when he brought the toy car and 
+told me how he would want to control it ). He quickly got tempered right after my comment of why I had drawn the DC motor controls and then quickly got fustrated, to really, really mad. Specifically towards me personally,
+such as "you don't do shit!, you don't know what the fuck you're doing!, listen, Josh, you don't know what the fuck you're doing!, and all I get from you is argument and bullshit, you never listen to me, 
+I know what the fuck I'm doing and you don't!), said Chris.
+
+Soon after, I walked away to go find Dr. Murray to avoid Chris during his harassment of me as another student. Shortly after when I walked out, one of the secuirty guiards in the morning asked if everyone was okay. I told 
+him that we had an argument that I thought was technical, but he soon made it personal that lead to harrasment. I proceeded to find Dr. Murray in his office, but he was in a meeting, so I went back downstairs to grab my 
+belongings and electronics/tools, and as I was packing, he seemed to have a gradual agressive more hot face, and eventually to like the death face stare, all due to the fact that I was leaving after being harassed. Then when 
+I was about to leave, he then asked "Are you gonna go take a shit and leave, or what?, you just gonna puss out to Dr. Murray or what?", where I replied, "yeah im gonna go leave.". As a student, we shouldn't even be like this at this point in college, and the school 
+shouldn't accept this. I then left to wait by the security to let Chris leave because I don't feel comfortable around him since he made me feel like he potentially wanted to harm me. Soon after, he had left to go see 
+if Dr. Murray was in the office. He had also tried to make up right before he went to the elevator, as if I wouldn't talk to Dr Murray about this situation and if I respect him and he respects me. Again, he harassed me, 
+disrespected me, all I did was recommend why to use an H-Bridge, and it's been tested and verified for the transferred power ratings that I tested. 
+
+Later Chris and Murray had talked but he wanted all of us to talk with him. We discussed our language and situation, even though I didn't even use profanity, he reminded us both because later on a 1 on 1, I showed 
+him the video I had recorded at the time to show what he said to me in that morning. However, he had said it did not show what happened before or after the recording, and that this situation is a he said but she said kinda
+situation and cannot make a valid action due to multiple reasons. However, we are students, and not 2020 Police having to body cam every time a situation may happen. We shouldn't have to be like that for our safety. 
+How am I supposed to do that, knowing a person would suddenly get this badly tempered and even look like he was gonna harm me and keep harassing me after walking out for a while and still tell me "you just gonna take a shit and 
+leave". Either way, he clearly harassed me. As well as the wrong intentions when he tried to "make up" since he told me "you just gonna puss out to Dr. Murray or what?" is him asking for a fight instead of doing the right approach by
+just walking out. 
+
+Later in the evening i was thinking, wasn't I the one deciding how to control the hardware for this design for the motor control for the RC? Assuming he already knows whether they are regular 12V dc motors or not, we can control them with an H-Bridge
+to have control of the speeds and overall behavior as an actual RC, an example, your usual rc when letting off the throttle will slow down gradually as you center your joystick's behavior with the ps3 remote he coded to 
+use (note: i am unsure how we will have communication with a esp32 and Jetson with the wifi extenders that use ethernet ports, where the esp32 doesnt have one. Also, the extenders require 24V to operate. 
+We would need 12V more, and that's definitely more current draw, which will lessen the battery life of the small kids' battery left. Not sure how old, but a bit used from the looks. Work with what you have for now unless
+we really need a critical part. 
+
+Feb 28th - Mar 1st
+- I have decided to continue on my part of the design since it is theoretically planned and thought out, and halfway tested for the RC side. Since Chris needs to interact with at least the sprayer side i will give
+back his electronics, tools, and supplies he handed me to work on previously. As of so far over the weekend, I have created a working controller that uses 1 esp32 and controls two receivers for the RC. More detailed within
+the other files of what it consists of, as well as the code/parts. Currently was tested on an old EE234 rc and repurposed it as a test rc that's low power rated and suitable to be transferred for higher power since
+I made sure the power specs are transferable. Over the weekend, I wrote software that behaves as an RC with some safety measures in certain scenarios. That way I don't have to test it on a large vehicle. 
+
+Later on Feb 28th, I had decided to get a cheap pcb proto board, and well, cheap for a reason, it seems it was milled or traced correctly and shorted one of the crucial pins affecting the board's behavior. Also as well 
+I unfortunately recieved the second esp32 s3 but it was defective since it didnt wanna turn on and recognize my COM port at all. So I ordered more microcontrollers, specifically the same ones just in case and an esp32 varient 
+ESP32 Lora v.3 that can have longer range than ESP_NOW communication protocol. About 300-500ft of range for low power microcontroller. Where the Lora can average 3000 to 16,000ft. Cheap and so far reliable. 
+Test recording request by contacting me made this day to. 
+
+Code, explanations are in the Read Me file and updating until the capstone is finished. Will update the photos mentioned earlier. 
