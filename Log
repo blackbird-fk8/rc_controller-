@@ -74,3 +74,22 @@ ESP32 Lora v.3 that can have longer range than ESP_NOW communication protocol. A
 Test recording request by contacting me made this day to. 
 
 Code, explanations are in the Read Me file and updating until the capstone is finished. Will update the photos mentioned earlier. 
+
+March 7-9th
+- I have made via python and other programming software to develop a ai system that can be running locally on a Latte Panda 3 Delta, where the latte panda has LDDR4 RAM 8Gb, some cpu and no ai accelerator.
+So this mini computer can run small to small/medium ai models and vision. I added a UI that is user friendly, able to preview the model and cameras preview. as well event logging for scenarios that happened.
+as well option to switch ai models and train your own. So now by having a stable ai vision detection, we are at a state where we can develop and test the rc to simulate the ai model and stabilize the camera 
+while in motion etc. 
+
+note: After several days or weeks, chris still hasn't sent me his code to do either the controller or sprayer system. he keeps telling me he will and doesn't. Same with the
+other capstone peers. talked to abyla and he tells me that Chris simply tells them what he wants them to develop but never gives enough details or the structure and code they will have to 
+work with. this is very critical due to many dependencies and bugs by us developing what he wants blindly w1ith not enough information to develop.
+our current progress will more likley not make a full finished product with this experience with Chris. So by making a ai system on the panda will be the backup route.
+
+next steps will be to make a trained animal model to test and improve my identification model. then to make a basic food quality model to show how to switch the model.
+
+as well figure out the led indicator for food quality, maybe change the UI for food quality and show digital indication, as well data sets for different foods. two step process 
+of scanning or dep3dning what you scan have the option of how many scans and get the average and result will be the average score of quality.
+
+later 3d print a case using my 3d scanner to accurately make a enclosure. for the panda, possible ips 7in touch capacitive screen, relay switch and camera.
+as well the 18650 battery hat module (provides 3-7hrs of use depending the systems power draw).
